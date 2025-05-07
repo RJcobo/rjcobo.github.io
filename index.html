@@ -4,16 +4,64 @@
   <meta charset="UTF-8">
   <title>BakeLang</title>
   <style>
-    body { font-family: sans-serif; line-height: 1.5; padding: 2rem; }
-    pre { background: #f4f4f4; padding: 1rem; border-radius: 4px; }
-    button { padding: .5rem 1rem; margin-top: 1rem; }
+    body {
+      background-color: #8B4513;   /* saddle brown */
+      color: #f5f5dc;             /* beige text */
+      font-family: sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    a, a:visited {
+      color: #fff;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 0.2em; }
+    h2 { font-size: 1.5rem; color: #f0e68c; margin-top: 0; }
+    h3 { margin-top: 2em; color: #ffe4c4; }
+    ul { list-style: disc inside; }
+    pre {
+      background: #d2b48c;       /* tan */
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+      color: #000;
+    }
+    code { font-family: monospace; }
+    button {
+      background: #deb887;       /* burlywood */
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover { background: #cd853f; }
+    .slides {
+      margin-top: 1em;
+      margin-bottom: 2em;
+    }
   </style>
 </head>
 <body>
+
   <h1>BakeLang</h1>
   <h2>By Raul Montes</h2>
 
-  <h3>Example: FizzBuzz</h3>
+  <h3>Features</h3>
+  <ul>
+    <li><strong>Recipe-based structure</strong>: define reusable “recipes” (functions) and invoke them with <code>Make</code>.</li>
+    <li><strong>Ingredient declarations</strong>: <code>Ingredient name : type;</code> reserves variables.</li>
+    <li><strong>Mix / Fold</strong>: assignment via <code>Mix &lt;expr&gt; into &lt;ingredient&gt;;</code> (alias <code>Fold</code>).</li>
+    <li><strong>Serve</strong>: output with <code>Serve &lt;expr&gt;;</code> (like <code>print</code>).</li>
+    <li><strong>Ask</strong>: prompt the baker for input: <code>Ask &lt;expr&gt; into &lt;var&gt;;</code>.</li>
+    <li><strong>Repeat loops</strong>: <code>Repeat &lt;start&gt; to &lt;end&gt; { … }</code> with loop index <code>i</code>.</li>
+    <li><strong>If/Else</strong>: conditional steps: <code>If (&lt;cond&gt;) then { … } Else { … }</code>.</li>
+    <li><strong>Parameterized recipes</strong>: pass ingredients into sub-recipes for complex workflows.</li>
+  </ul>
+
+  <h3>Example: FizzBuzz in BakeLang</h3>
   <pre><code class="language-bake">
 Ingredient i        : int;
 Ingredient current  : int;
@@ -36,8 +84,27 @@ Repeat 1 to 100 {
 }
   </code></pre>
 
+  <h3>Presentation Slides</h3>
+  <div class="slides">
+    <object
+      data="cs%20420final.pptx"
+      type="application/vnd.openxmlformats-officedocument.presentationml.presentation"
+      width="100%"
+      height="500"
+    >
+      <p>Your browser doesn’t support embedding PowerPoint.  
+         <a href="cs%20420final.pptx">Download the slides here</a>.</p>
+    </object>
+  </div>
+
+  <h3>Repository</h3>
   <a href="https://github.com/raulj_flmedd8/BakeLang">
     <button>View on GitHub</button>
   </a>
+
+  <p style="margin-top:3em; font-style:italic;">
+    Enjoy baking code as much as you bake goodies!
+  </p>
+
 </body>
 </html>
