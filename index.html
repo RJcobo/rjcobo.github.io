@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BakeLang</title>
+  <style>
+    body { font-family: sans-serif; line-height: 1.5; padding: 2rem; }
+    pre { background: #f4f4f4; padding: 1rem; border-radius: 4px; }
+    button { padding: .5rem 1rem; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>BakeLang</h1>
+  <h2>By Raul Montes</h2>
+
+  <h3>Example: FizzBuzz</h3>
+  <pre><code class="language-bake">
+Ingredient i        : int;
+Ingredient current  : int;
+
+Repeat 1 to 100 {
+  Mix i into current;
+  If (current % 15 == 0) then {
+    Serve "FizzBuzz";
+  } Else {
+    If (current % 3 == 0) then {
+      Serve "Fizz";
+    } Else {
+      If (current % 5 == 0) then {
+        Serve "Buzz";
+      } Else {
+        Serve current;
+      }
+    }
+  }
+}
+  </code></pre>
+
+  <a href="https://github.com/raulj_flmedd8/BakeLang">
+    <button>View on GitHub</button>
+  </a>
+</body>
+</html>
